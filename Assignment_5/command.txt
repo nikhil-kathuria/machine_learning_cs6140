@@ -1,0 +1,4 @@
+java -cp liblinear-java-1.95.jar de.bwaldvogel.liblinear.Train -s 0 -c 0.1 train.txt ridge
+java -cp liblinear-java-1.95.jar de.bwaldvogel.liblinear.Predict -b 1 test.txt ridge rpredict
+java -cp liblinear-java-1.95.jar de.bwaldvogel.liblinear.Train -s 6 -c 0.1 train.txt lasso
+java -cp liblinear-java-1.95.jar de.bwaldvogel.liblinear.Predict -b 1 test.txt lasso lpredict
