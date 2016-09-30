@@ -1,0 +1,233 @@
+Done Normalization
+Converted to LIBSVM format
+Trainining Model
+.....................*.....*
+optimization finished, #iter = 26136
+nu = 0.955748
+obj = -5650.221903, rho = 0.084647
+nSV = 11344, nBSV = 5421
+...................*.....*
+optimization finished, #iter = 24143
+nu = 0.962620
+obj = -5615.830450, rho = 0.071960
+nSV = 11263, nBSV = 5419
+.................*.....*
+optimization finished, #iter = 22453
+nu = 0.826579
+obj = -5078.944209, rho = -0.072627
+nSV = 11962, nBSV = 1951
+....................*......*
+optimization finished, #iter = 26656
+nu = 0.953562
+obj = -5660.089952, rho = 0.088288
+nSV = 11370, nBSV = 5421
+...................*....*
+optimization finished, #iter = 23321
+nu = 0.952808
+obj = -5665.063999, rho = 0.090123
+nSV = 11379, nBSV = 5421
+...................*.....*
+optimization finished, #iter = 24682
+nu = 0.938539
+obj = -5734.561210, rho = 0.115763
+nSV = 11552, nBSV = 5421
+....................*.....*
+optimization finished, #iter = 25597
+nu = 0.956169
+obj = -5647.402386, rho = 0.083607
+nSV = 11339, nBSV = 5421
+....................*.....*
+optimization finished, #iter = 25853
+nu = 0.927777
+obj = -5779.504163, rho = 0.132344
+nSV = 11686, nBSV = 5421
+...................*......*
+optimization finished, #iter = 25075
+nu = 0.961852
+obj = -5619.854626, rho = 0.073444
+nSV = 11272, nBSV = 5420
+................*....*
+optimization finished, #iter = 20531
+nu = 0.993094
+obj = -5881.275044, rho = -0.013581
+nSV = 11765, nBSV = 5835
+..................*.....*
+optimization finished, #iter = 23410
+nu = 0.816561
+obj = -5282.178377, rho = -0.126878
+nSV = 12464, nBSV = 2479
+..........*........*
+optimization finished, #iter = 18927
+nu = 0.997770
+obj = -5934.085771, rho = 0.003902
+nSV = 11872, nBSV = 5887
+............*.......*
+optimization finished, #iter = 19371
+nu = 0.997024
+obj = -5940.023881, rho = 0.005898
+nSV = 11881, nBSV = 5898
+.................*.......*
+optimization finished, #iter = 24235
+nu = 0.982744
+obj = -6022.982147, rho = 0.033879
+nSV = 12054, nBSV = 5922
+......*..........*
+optimization finished, #iter = 16046
+nu = 0.999273
+obj = -5918.941203, rho = -0.001040
+nSV = 11841, nBSV = 5573
+....................*....*
+optimization finished, #iter = 24721
+nu = 0.971940
+obj = -6076.638287, rho = 0.051997
+nSV = 12188, nBSV = 5923
+................*....*
+optimization finished, #iter = 20791
+nu = 0.993871
+obj = -5886.071147, rho = -0.012054
+nSV = 11774, nBSV = 5849
+..................*.....*
+optimization finished, #iter = 23299
+nu = 0.818478
+obj = -5251.017950, rho = -0.118374
+nSV = 12383, nBSV = 2402
+.................*.....*
+optimization finished, #iter = 22376
+nu = 0.990909
+obj = -5892.765383, rho = 0.017505
+nSV = 11791, nBSV = 5837
+.................*...*
+optimization finished, #iter = 20573
+nu = 0.990154
+obj = -5898.511427, rho = 0.019476
+nSV = 11800, nBSV = 5839
+...................*.*
+optimization finished, #iter = 20535
+nu = 0.975857
+obj = -5979.216210, rho = 0.047096
+nSV = 11973, nBSV = 5840
+................*......*
+optimization finished, #iter = 22535
+nu = 0.993516
+obj = -5877.999341, rho = 0.012460
+nSV = 11760, nBSV = 5835
+...................*.....*
+optimization finished, #iter = 24652
+nu = 0.965062
+obj = -6031.414381, rho = 0.064961
+nSV = 12107, nBSV = 5841
+.......*........*
+optimization finished, #iter = 15817
+nu = 0.999168
+obj = -5846.009545, rho = 0.001544
+nSV = 11693, nBSV = 5724
+..................*.....*
+optimization finished, #iter = 23445
+nu = 0.815834
+obj = -5291.168642, rho = 0.129344
+nSV = 12490, nBSV = 2497
+..................*.....*
+optimization finished, #iter = 23418
+nu = 0.815729
+obj = -5295.706634, rho = 0.130589
+nSV = 12499, nBSV = 2513
+..................*......*
+optimization finished, #iter = 24125
+nu = 0.811242
+obj = -5359.720634, rho = 0.148299
+nSV = 12672, nBSV = 2650
+..................*.....*
+optimization finished, #iter = 23329
+nu = 0.816614
+obj = -5279.614681, rho = 0.126177
+nSV = 12459, nBSV = 2474
+...................*.....*
+optimization finished, #iter = 24222
+nu = 0.806973
+obj = -5401.640500, rho = 0.160024
+nSV = 12806, nBSV = 2732
+..................*.....*
+optimization finished, #iter = 23179
+nu = 0.818291
+obj = -5254.672041, rho = 0.119364
+nSV = 12392, nBSV = 2410
+.......*.........*
+optimization finished, #iter = 16244
+nu = 0.998927
+obj = -5951.942044, rho = 0.001791
+nSV = 11907, nBSV = 5469
+.................*.....*
+optimization finished, #iter = 22125
+nu = 0.984900
+obj = -6035.619000, rho = 0.029672
+nSV = 12080, nBSV = 5940
+...........*.........*
+optimization finished, #iter = 20395
+nu = 0.997179
+obj = -5930.695340, rho = -0.004908
+nSV = 11867, nBSV = 5818
+....................*......*
+optimization finished, #iter = 26080
+nu = 0.974114
+obj = -6089.754474, rho = 0.047851
+nSV = 12214, nBSV = 5944
+................*.....*
+optimization finished, #iter = 21369
+nu = 0.991683
+obj = -5897.566757, rho = -0.015982
+nSV = 11800, nBSV = 5849
+.................*......*
+optimization finished, #iter = 23604
+nu = 0.985689
+obj = -6041.892360, rho = 0.028170
+nSV = 12089, nBSV = 5958
+..............*......*
+optimization finished, #iter = 20656
+nu = 0.996453
+obj = -5936.621637, rho = -0.006884
+nSV = 11876, nBSV = 5845
+...................*.....*
+optimization finished, #iter = 24115
+nu = 0.974883
+obj = -6096.185275, rho = 0.046395
+nSV = 12223, nBSV = 5958
+................*......*
+optimization finished, #iter = 22114
+nu = 0.990928
+obj = -5903.360805, rho = -0.017962
+nSV = 11809, nBSV = 5849
+..................*....*
+optimization finished, #iter = 22951
+nu = 0.982263
+obj = -6019.423630, rho = -0.034752
+nSV = 12049, nBSV = 5899
+...................*......*
+optimization finished, #iter = 25055
+nu = 0.989190
+obj = -6188.200422, rho = 0.018707
+nSV = 12396, nBSV = 6131
+...................*.....*
+optimization finished, #iter = 24268
+nu = 0.976629
+obj = -5984.315762, rho = -0.045626
+nSV = 11982, nBSV = 5849
+....................*..*
+optimization finished, #iter = 22930
+nu = 0.971490
+obj = -6072.984774, rho = 0.052823
+nSV = 12183, nBSV = 5910
+................*....*
+optimization finished, #iter = 20833
+nu = 0.994293
+obj = -5882.785388, rho = -0.010931
+nSV = 11769, nBSV = 5847
+..................*....*
+optimization finished, #iter = 22975
+nu = 0.965830
+obj = -6036.674756, rho = -0.063521
+nSV = 12116, nBSV = 5851
+Total nSV = 59799
+Test Accuracy 
+Accuracy = 10.28% (1028/10000) (classification)
+Train Accuracy 
+Accuracy = 100% (60000/60000) (classification)
