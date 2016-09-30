@@ -1,0 +1,7 @@
+Ridege Regression			Linear Regression			Logistic Regression
+Spam Test		0.1121	90	Spam Test	88.67			Spam Test 89.34
+Spam Train		0.1047	91	Spam Train	89.56			Spam Train 90.12
+
+Housing Test	22.5939		Housing Test 25.0340		NA Two class ouput cannot be mapped as continous output
+Housing Train	22.0820		Housing Train 22.0826		NA Two class ouput cannot be mapped as continous output
+

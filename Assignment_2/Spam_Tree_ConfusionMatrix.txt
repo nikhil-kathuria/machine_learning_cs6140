@@ -1,0 +1,51 @@
+True Positive 165.0
+False Positive 20.0
+True Negative 242.0
+False Negative 33.0
+ Accuracy for bucket[1] is 88.47826086956522
+True Positive 130.0
+False Positive 19.0
+True Negative 289.0
+False Negative 23.0
+ Accuracy for bucket[2] is 90.88937093275487
+True Positive 170.0
+False Positive 15.0
+True Negative 240.0
+False Negative 36.0
+ Accuracy for bucket[3] is 88.93709327548807
+True Positive 172.0
+False Positive 17.0
+True Negative 252.0
+False Negative 20.0
+ Accuracy for bucket[4] is 91.97396963123644
+True Positive 156.0
+False Positive 26.0
+True Negative 253.0
+False Negative 26.0
+ Accuracy for bucket[5] is 88.72017353579176
+True Positive 166.0
+False Positive 28.0
+True Negative 251.0
+False Negative 16.0
+ Accuracy for bucket[6] is 90.45553145336225
+True Positive 148.0
+False Positive 23.0
+True Negative 263.0
+False Negative 27.0
+ Accuracy for bucket[7] is 89.15401301518439
+True Positive 166.0
+False Positive 27.0
+True Negative 247.0
+False Negative 21.0
+ Accuracy for bucket[8] is 89.587852494577
+True Positive 134.0
+False Positive 21.0
+True Negative 275.0
+False Negative 31.0
+ Accuracy for bucket[9] is 88.72017353579176
+True Positive 153.0
+False Positive 16.0
+True Negative 264.0
+False Negative 20.0
+ Accuracy for bucket[10] is 92.05298013245033
+ Average ACC 89.89694188762022

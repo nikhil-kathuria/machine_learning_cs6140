@@ -1,0 +1,24 @@
+ACC Classification for fold [1] 89.56521739130436
+ACC Classification for fold [2, 3, 4, 5, 6, 7, 8, 9, 10] 90.9442163728568
+ACC Classification for fold [2] 89.3709327548807
+ACC Classification for fold [1, 3, 4, 5, 6, 7, 8, 9, 10] 90.84541062801932
+ACC Classification for fold [3] 92.84164859002169
+ACC Classification for fold [1, 2, 4, 5, 6, 7, 8, 9, 10] 91.23188405797102
+ACC Classification for fold [4] 91.3232104121475
+ACC Classification for fold [1, 2, 3, 5, 6, 7, 8, 9, 10] 91.18357487922705
+ACC Classification for fold [5] 90.67245119305856
+ACC Classification for fold [1, 2, 3, 4, 6, 7, 8, 9, 10] 91.18357487922705
+ACC Classification for fold [6] 89.3709327548807
+ACC Classification for fold [1, 2, 3, 4, 5, 7, 8, 9, 10] 91.28019323671498
+ACC Classification for fold [7] 94.14316702819957
+ACC Classification for fold [1, 2, 3, 4, 5, 6, 8, 9, 10] 90.91787439613526
+ACC Classification for fold [8] 89.80477223427332
+ACC Classification for fold [1, 2, 3, 4, 5, 6, 7, 9, 10] 91.18357487922705
+ACC Classification for fold [9] 89.587852494577
+ACC Classification for fold [1, 2, 3, 4, 5, 6, 7, 8, 10] 90.96618357487922
+ACC Classification for fold [10] 91.61147902869757
+ACC Classification for fold [1, 2, 3, 4, 5, 6, 7, 8, 9] 91.10414657666345
+Avg ACC Classification Test 90.82916638820407
+Avg ACC Classification train 91.08406334809213
+Mse Regression Test 22.59399341245541
+Mse Regression Train 22.082047108882875

@@ -1,0 +1,51 @@
+True Positives 164
+False Positives 53
+True Negatives 230
+Flase Negatives 14
+Accuracy For fold 1 -> 85.46637744034707
+True Positives 161
+False Positives 36
+True Negatives 250
+Flase Negatives 14
+Accuracy For fold 2 -> 89.15401301518439
+True Positives 157
+False Positives 21
+True Negatives 259
+Flase Negatives 24
+Accuracy For fold 3 -> 90.23861171366593
+True Positives 157
+False Positives 40
+True Negatives 246
+Flase Negatives 18
+Accuracy For fold 4 -> 87.41865509761388
+True Positives 183
+False Positives 22
+True Negatives 236
+Flase Negatives 20
+Accuracy For fold 5 -> 90.88937093275487
+True Positives 177
+False Positives 31
+True Negatives 245
+Flase Negatives 8
+Accuracy For fold 6 -> 91.54013015184381
+True Positives 165
+False Positives 39
+True Negatives 240
+Flase Negatives 17
+Accuracy For fold 7 -> 87.85249457700651
+True Positives 154
+False Positives 25
+True Negatives 257
+Flase Negatives 25
+Accuracy For fold 8 -> 89.15401301518439
+True Positives 171
+False Positives 27
+True Negatives 242
+Flase Negatives 21
+Accuracy For fold 9 -> 89.587852494577
+True Positives 146
+False Positives 32
+True Negatives 257
+Flase Negatives 17
+Accuracy For fold 10 -> 89.15929203539822
+Avg Accuracy 89.04608104735762

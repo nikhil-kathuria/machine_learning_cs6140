@@ -1,0 +1,216 @@
+import numpy
+
+import sys
+
+import math
+
+from readData import readHouse, readSpam, extractMatrix, readSmallSpam
+
+from plotROC import rocAndAuc
+
+from normalizedata import normalize
+
+# Logistic Spam = .0005
+# Linear Spam = .0001
+# Linear House = .001
+# Iniiate Lambda value
+lam = .0001
+
+
+def sigmoid(value):
+    return 1 / (1 + math.exp(-value))
+
+
+def sigmoidVector(data):
+    for row in range(data.shape[0]):
+            data[row] = sigmoid(data[row])
+
+
+def sigmoidAll(data):
+    for row in range(data.shape[0]):
+        for col in range(data.shape[1]):
+            data[row][col] = sigmoid(data[row][col])
+    return data
+
+
+def logistichypoth(weights, data):
+    datalin = linearhypoth(weights, data)
+    sigmoidVector(datalin)
+    return datalin
+
+
+def linearhypoth(weights, data):
+    return data.dot(weights)
+
+
+def computeCost(weights, data, labels):
+    hypoth_V = data.dot(weights)
+    sumerror = float(0)
+
+    for row in range(labels.shape[0]):
+        sumerror += pow(hypoth_V[row] - labels[row], 2)
+    return .5 * sumerror
+
+
+def likelyhood(weights, data, labels):
+    hypoth_V = logistichypoth(weights, data)
+
+    sumlikely = float(0)
+    for row in range(labels.shape[0]):
+        label = labels[row]
+        sumlikely += label * math.log2(hypoth_V[row]) + (1 - label) * math.log2(1 - hypoth_V[row])
+
+    return sumlikely / labels.shape[0]
+
+
+def updateWeights(hypoth_V, weights, data, labels):
+    diff = labels - hypoth_V
+    weights = weights + lam * (numpy.transpose(data).dot(diff))
+    return weights
+
+
+def checkGradient(data, labels, linear):
+    # Add intercpet and assign weights array
+    intercept = numpy.ones((data.shape[0], 1), dtype=float)
+    data = numpy.hstack((intercept, data))
+    weights = numpy.zeros(data.shape[1])
+
+    # Variables for const and exit condition
+    j_history = list()
+    j_old = sys.maxsize
+    j_new = 0
+    errordiff = .0001
+
+    while abs(j_old - j_new) > errordiff:
+        j_old = j_new
+        if (linear):
+            # print("Linear")
+            hypoth_V = linearhypoth(weights, data)
+            weights = updateWeights(hypoth_V, weights, data, labels)
+            j_new = computeCost(weights, data, labels)
+        else:
+            hypoth_V = logistichypoth(weights, data)
+            weights = updateWeights(hypoth_V, weights, data, labels)
+            # print("Logistic")
+            j_new = likelyhood(weights, data, labels)
+
+        j_history.append(j_new)
+        # print(j_new)
+
+    return weights
+
+
+def predict(weights, test):
+    intercept = numpy.ones((test.shape[0], 1), dtype=float)
+    test = numpy.hstack((intercept, test))
+    return test.dot(weights)
+
+
+def msecalc(predictions, labels):
+    summse = float(0)
+    for row in range(labels.shape[0]):
+        summse += pow(predictions[row] - labels[row], 2)
+        print("Labels " + str(labels[row]) + " Prediction " + str(predictions[row]))
+    return summse / labels.shape[0]
+
+
+def accCalc(prediction, labels, threshold):
+    tp = 0
+    fp = 0
+    tn = 0
+    fn = 0
+    for row in range(labels.shape[0]):
+        if (prediction[row] >= threshold):
+            if (labels[row] == 1):
+                tp += 1
+            else:
+                fp += 1
+        else:
+            if (labels[row] == 0):
+                tn += 1
+            else:
+                fn += 1
+    print("True Positives " + str(tp))
+    print("False Positives " + str(fp))
+    print("True Negatives " + str(tn))
+    print("Flase Negatives " + str(fn))
+    return (float(tp + tn) / labels.shape[0] * 100)
+
+
+def runLinearRegression():
+    # Get normalized data and labels
+    (traindata, trainlabels) = readHouse("/Users/nikhilk/Documents/NEU_MSCS/ML/Assignment_1/housing_train.txt")
+    (testdata, testlabels) = readHouse("/Users/nikhilk/Documents/NEU_MSCS/ML/Assignment_1/housing_test.txt")
+
+    normalize(traindata)
+    normalize(testdata)
+
+    weights = checkGradient(traindata, trainlabels, True)
+    print(weights)
+    predictions = predict(weights, testdata)
+
+    mse = msecalc(predictions, testlabels)
+    print("MSE for test " + str(mse))
+
+    predictions = predict(weights, traindata)
+    mse = msecalc(predictions, trainlabels)
+    print("MSE for train " + str(mse))
+
+
+def runLogisticRegressin():
+    (bucketmap, full) = readSpam("/Users/nikhilk/Documents/NEU_MSCS/ML/Assignment_1/spambase.data.txt")
+
+    sumacc = 0
+    for key in bucketmap.keys():
+        trainset = list(bucketmap.keys())
+        testset = list()
+        testset.append(key)
+        trainset.remove(key)
+
+        # Get train and test matrix and labels as well
+        (traindata, trainlabels) = extractMatrix(bucketmap, trainset, full)
+        (testdata, testlabels) = extractMatrix(bucketmap, testset, full)
+
+        # Normalize test and traint data
+        normalize(traindata)
+        normalize(testdata)
+
+        weights = checkGradient(traindata, trainlabels, False)
+        predictions = predict(weights, testdata)
+        sigmoidVector(predictions)
+
+        # Accuracy
+        accuracy = accCalc(predictions, testlabels, .56)
+        print("Accuracy For fold " + str(key) + " -> " + str(accuracy))
+
+        # ROC and AUC
+        rocAndAuc(predictions, testlabels, .56)
+
+        sumacc += accuracy
+    print("Avg Accuracy " + str(sumacc / len(bucketmap)))
+
+
+def testlogistic():
+    (traindata, trainlabels) = readSmallSpam("/Users/nikhilk/Documents/NEU_MSCS/ML/Assignment_1/spamtrain.txt")
+    (testdata, testlabels) = readSmallSpam("/Users/nikhilk/Documents/NEU_MSCS/ML/Assignment_1/spamtest.txt")
+
+    normalize(traindata)
+    normalize(testdata)
+
+    weights = checkGradient(traindata, trainlabels, False)
+    print(weights)
+    predictions = predict(weights, testdata)
+    sigmoidVector(predictions)
+
+    accuracy = accCalc(predictions, testlabels, .56)
+    print("Accuracy " + str(accuracy))
+    print("Avg Accuracy " + str(accuracy / testlabels.shape[0]))
+
+
+def main():
+    runLogisticRegressin()
+    # runLinearRegression()
+    # testlogistic()
+
+if __name__ == '__main__':
+    main()

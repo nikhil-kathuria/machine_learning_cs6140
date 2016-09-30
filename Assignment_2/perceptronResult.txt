@@ -1,0 +1,11 @@
+Iteration 1, Total Mistakes 136
+Iteration 2, Total Mistakes 68
+Iteration 3, Total Mistakes 50
+Iteration 4, Total Mistakes 22
+Iteration 5, Total Mistakes 21
+Iteration 6, Total Mistakes 34
+Iteration 7, Total Mistakes 25
+Iteration 8, Total Mistakes 0
+Actual weights [-14.           2.52873259   5.70717051   8.52231457  11.32560723]
+Normalized weights [-14.           0.18062376   0.40765504   0.60873676   0.80897195]
+[Finished in 0.5s]
